@@ -1,0 +1,10 @@
+{
+    "tabSize": 4,
+    "spaceUnits": 4,
+    "useTabChar": true,
+    "path": {
+        ".brackets.json": {
+            "useTabChar": false
+        }
+    }
+}
