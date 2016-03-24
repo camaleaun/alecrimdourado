@@ -1,0 +1,11 @@
+{
+  "name": "alecrimdourado",
+  "version": "1.0.0",
+  "description": "Website institucional para as empresas Alecrim Dourado Variedades e Festas.",
+  "dependencies": {},
+  "scripts": {
+    "install": "grunt install"
+  },
+  "private": true,
+  "author": "Gilberto Tavares <camaleaun@gmail.com>"
+}
