@@ -8,7 +8,7 @@ module.exports = function (grunt) {
 			bower:     'bower_components/',
 			wordpress: 'www/',
 			content:   '<%= dir.wordpress %>wp-content/',
-			themes:    '<%= dir.content %>themes/',
+			themes:    '<%= dir.content %>themes/'
 		},
 		shell: {
 			bowerInstall: {
@@ -24,14 +24,7 @@ module.exports = function (grunt) {
 				command: 'php wp-cli.phar core download --locale=pt_BR'
 			},
 			wpCleanup: {
-				command: [
-					'rm -rf <%= dir.content %>plugins/askimet',
-					'rm <%= dir.content %>plugins/hello.php',
-					'rm -rf <%= dir.themes %>twenty*',
-					'rm <%= dir.content %>languages/themes/twenty*',
-					'rm <%= dir.content %>languages/plugins/akismet*',
-					'rm <%= dir.wordpress %>readme.html'
-				].join(';')
+				command: 'rm -rf <%= dir.content %>plugins/akismet <%= dir.content %>plugins/hello.php <%= dir.themes %>twenty* <%= dir.content %>languages/themes/twenty* <%= dir.content %>languages/plugins/akismet* <%= dir.wordpress %>readme.html'
 			}
 		},
 		wget: {
