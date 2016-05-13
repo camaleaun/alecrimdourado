@@ -5,6 +5,10 @@
     "path": {
         ".brackets.json": {
             "useTabChar": false
+        },
+        "wp-cli.yml": {
+            "useTabChar": false,
+            "spaceUnits": 2
         }
     }
 }

@@ -1,6 +1,6 @@
 path: www
 
 core config:
-	locale: pt_BR
-	extra-php: |
-		define('WP_DEBUG', true);
+  locale: pt_BR
+  extra-php: |
+    define('WP_DEBUG', true);
