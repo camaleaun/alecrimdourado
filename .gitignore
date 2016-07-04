@@ -15,11 +15,23 @@
 /www/wp-content/index.php
 /www/wp-includes/
 
+
+/www/wp-content/languages/plugins/woocommerce*
+/www/wp-content/languages/themes/storefront*
+
 # Wordpress plugins
 /www/wp-content/plugins/akismet/
+/www/wp-content/plugins/dsysgrider/
+/www/wp-content/plugins/woocommerce/
+/www/wp-content/plugins/xplugin/
 /www/wp-content/plugins/hello.php
 
+# s5 themes
+/www/wp-content/plugins/s5buying/
+/www/wp-content/plugins/s5panfe/
+
 # Theme files
+/www/wp-content/themes/storefront/
 
 # Wordpress root files
 /www/.htaccess
@@ -43,3 +55,6 @@
 /composer.lock
 .DS_Store
 *.phar
+
+# temp
+/www/wp-content/plugins/s5pteste/

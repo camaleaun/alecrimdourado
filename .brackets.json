@@ -9,6 +9,14 @@
         "wp-cli.yml": {
             "useTabChar": false,
             "spaceUnits": 2
+        },
+        "Gruntfile.js": {
+            "useTabChar": false,
+            "spaceUnits": 2
+        },
+        "*.scss": {
+            "useTabChar": false,
+            "spaceUnits": 2
         }
     }
 }

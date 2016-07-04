@@ -8,7 +8,8 @@ module.exports = function (grunt) {
 			bower:     'bower_components/',
 			wordpress: 'www/',
 			content:   '<%= dir.wordpress %>wp-content/',
-			themes:    '<%= dir.content %>themes/'
+			themes:    '<%= dir.content %>themes/',
+			plugins:   '<%= dir.content %>plugins/'
 		},
 		shell: {
 			bowerInstall: {
@@ -25,6 +26,9 @@ module.exports = function (grunt) {
 			},
 			wpCleanup: {
 				command: 'rm -rf <%= dir.content %>plugins/akismet <%= dir.content %>plugins/hello.php <%= dir.themes %>twenty* <%= dir.content %>languages/themes/twenty* <%= dir.content %>languages/plugins/akismet* <%= dir.wordpress %>readme.html'
+			},
+			s5panfe: {
+				command: 'git clone git@github.com:camaleaun/s5panfe.git <%= dir.plugins %>s5panfe'
 			}
 		},
 		wget: {
@@ -42,7 +46,7 @@ module.exports = function (grunt) {
 
 	// Default task(s).
 	grunt.registerTask('wpInstall', ['wget:wpCli', 'shell:wpCoreDownload', 'shell:wpCleanup']);
-	grunt.registerTask('install', ['wpInstall']);
+	grunt.registerTask('install', ['wpInstall', 'shell:s5panfe']);
 
 	grunt.registerTask('default', ['install']);
 
