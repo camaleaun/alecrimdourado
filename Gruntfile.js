@@ -29,6 +29,9 @@ module.exports = function (grunt) {
 			},
 			s5panfe: {
 				command: 'git clone git@github.com:camaleaun/s5panfe.git <%= dir.plugins %>s5panfe'
+			},
+			s5buying: {
+				command: 'git clone git@github.com:camaleaun/s5buying.git <%= dir.plugins %>s5buying'
 			}
 		},
 		wget: {
@@ -46,7 +49,7 @@ module.exports = function (grunt) {
 
 	// Default task(s).
 	grunt.registerTask('wpInstall', ['wget:wpCli', 'shell:wpCoreDownload', 'shell:wpCleanup']);
-	grunt.registerTask('install', ['wpInstall', 'shell:s5panfe']);
+	grunt.registerTask('install', ['wpInstall', 'shell:s5panfe', 'shell:s5buying']);
 
 	grunt.registerTask('default', ['install']);
 
